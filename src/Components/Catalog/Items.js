@@ -14,6 +14,7 @@ export function Items() {
                 setData(json);
                 setLoadingStatus(false);
             });
+        window.scrollTo(0,0);
     }, [])
 
     return (

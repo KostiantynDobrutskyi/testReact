@@ -1,7 +1,10 @@
 import './scss/app.scss';
+import {Routes, Route} from "react-router-dom";
 import {Header} from "./Components/Header/Header";
-import {Toolbar} from "./Components/Toolbar/Toolbar";
-import {Items} from "./Components/Catalog/Items";
+import Catalog from "./pages/Catalog";
+import NotFound from "./pages/notFound";
+import Cart from "./pages/Cart";
+
 
 function App() {
     return (
@@ -9,8 +12,11 @@ function App() {
             <Header/>
             <div className="content">
                 <div className="container">
-                    <Toolbar/>
-                    <Items/>
+                    <Routes>
+                        <Route path="/" element={<Catalog />} />
+                        <Route path="/cart" element={<Cart />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
                 </div>
             </div>
         </div>
