@@ -1,0 +1,14 @@
+.root {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 100px 0;
+}
+
+.root h1{
+    margin: 0 0 50px 0;
+}
+
+.root p{
+    font-size: 22px;
+}

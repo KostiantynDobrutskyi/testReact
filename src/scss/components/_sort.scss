@@ -1,0 +1,76 @@
+@import '../variables';
+
+.sort {
+  margin: 20px 0 0 auto;
+  position: relative;
+
+  .icon{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+
+    &:hover svg{
+      fill: #fe5f1e
+    }
+
+    svg{
+      display: block;
+      width: 13px;
+      height: auto;
+      transition: all .3s ease;
+
+    }
+  }
+
+  .reverse svg{
+    transform: rotate(180deg);
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+
+    b {
+      margin-right: 8px;
+    }
+
+    span {
+      color: $orange;
+      border-bottom: 1px dashed $orange;
+      cursor: pointer;
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 160px;
+
+    ul {
+      overflow: hidden;
+      li {
+        padding: 12px 20px;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          background: rgba(254, 95, 30, 0.05);
+        }
+
+        &.active {
+          font-weight: bold;
+          color: $orange;
+        }
+      }
+    }
+  }
+}

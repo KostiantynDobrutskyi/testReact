@@ -1,0 +1,44 @@
+.root{
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+
+.root input{
+    font-size: 16px;
+    padding: 8px 15px 8px 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #999;
+    min-height: 40px;
+    width: 400px;
+    max-width: 100%;
+    transition: all .1s ease-in;
+}
+
+.root svg{
+    height: auto;
+    opacity: .5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.root input:focus{
+    box-shadow: 0 7px 15px rgba(175, 175, 175, 0.35);
+}
+
+.searchIcon{
+    max-width: 25px;
+    left: 20px;
+}
+
+.closeIcon{
+    max-width: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.closeIcon:hover{
+    opacity: .7;
+}
