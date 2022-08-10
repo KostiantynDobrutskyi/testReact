@@ -1,14 +1,37 @@
 @import '../variables';
 
 .sort {
+  margin: 20px 0 0 auto;
   position: relative;
+
+  .icon{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+
+    &:hover svg{
+      fill: #fe5f1e
+    }
+
+    svg{
+      display: block;
+      width: 13px;
+      height: auto;
+      transition: all .3s ease;
+
+    }
+  }
+
+  .reverse svg{
+    transform: rotate(180deg);
+  }
+
   &__label {
     display: flex;
     align-items: center;
-
-    svg {
-      margin-right: 8px;
-    }
 
     b {
       margin-right: 8px;

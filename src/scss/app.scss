@@ -6,10 +6,10 @@
 
 body {
   background-color: $background;
+  padding: 0 20px;
 }
 
 .wrapper {
-  width: calc(100vw - 100px);
   height: 100%;
   background-color: #fff;
   margin: 50px auto;
@@ -25,15 +25,27 @@ body {
   }
 
   &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 100px 45px;
+
+    & > svg{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 480px) {
+    &__items {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
   }
 
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
